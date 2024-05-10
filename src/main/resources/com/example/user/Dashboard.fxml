@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1019.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.user.ListUserController">
+    <children>
+        <AnchorPane fx:id="tuteur_AP" layoutX="246.0" prefHeight="600.0" prefWidth="777.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="-3.6000000000000227" AnchorPane.topAnchor="0.0">
+            <styleClass>
+                <String fx:value="white-bg" />
+                <String fx:value="radius" />
+                <String fx:value="shadow" />
+            </styleClass>
+         <children>
+            <TableView fx:id="userTableView" layoutX="40.0" layoutY="117.0" prefHeight="199.0" prefWidth="700.0">
+               <columns>
+                  <TableColumn fx:id="nomCol" maxWidth="100.0" prefWidth="100.0" text="NOM" />
+                  <TableColumn fx:id="prenomCol" maxWidth="122.39996337890625" prefWidth="108.0" text="PRENOM" />
+                  <TableColumn fx:id="emailCol" maxWidth="237.5999755859375" prefWidth="237.5999755859375" text="EMAIL" />
+                  <TableColumn fx:id="passwordCol" maxWidth="209.60000610351562" prefWidth="149.60000610351562" text="PASSWORD" />
+                  <TableColumn fx:id="rolesCol" maxWidth="203.19998168945312" prefWidth="104.79998779296875" text="ROLES" />
+               </columns>
+            </TableView>
+            <Button fx:id="supprimerButton" layoutX="535.0" layoutY="341.0" mnemonicParsing="false" onAction="#deleteOne" prefHeight="34.0" prefWidth="109.0" style="-fx-background-color: #E96151;" text="Supprimer" textFill="WHITE" />
+            <Button fx:id="ajouterButton" layoutX="135.0" layoutY="341.0" mnemonicParsing="false" onAction="#ajouterButtonOnAction" prefHeight="34.0" prefWidth="109.0" style="-fx-background-color: #2A914D;" text="Ajouter" textFill="WHITE" />
+            <Button fx:id="cancelButton" layoutX="335.0" layoutY="341.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="34.0" prefWidth="109.0" style="-fx-background-color: #DBC2AD;" text="Fermer" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+        </AnchorPane>
+        <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="245.0" style="-fx-background-color: #DBC2AD;">
+            <children>
+                <ImageView fitHeight="176.0" fitWidth="236.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/logo-django.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="40.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="246.0" style="-fx-background-color: #DBC2AD;" stylesheets="@buttonGE.css" text="Home" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/icons8-home-50.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="246.0" style="-fx-background-color: #DBC2AD #DBC2AD;" stylesheets="@buttonGE.css" text="Users" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/icons8-users-48.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="246.0" style="-fx-background-color: #DBC2AD;" stylesheets="@buttonGE.css" text="Sinistre" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/icons8-school-50.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="247.0" style="-fx-background-color: #DBC2AD;" stylesheets="@buttonGE.css" text="Voiture" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/icons8-diploma-64.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="247.0" style="-fx-background-color: #DBC2AD;" stylesheets="@buttonGE.css" text="Devis" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/icons8-event-50.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="247.0" style="-fx-background-color: #DBC2AD;" stylesheets="@buttonGE.css" text="Contrat" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/icons8-giving-50.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="247.0" style="-fx-background-color: #DBC2AD;" stylesheets="@buttonGE.css" text="Reparation" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/icons8-teacher-50.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="247.0" style="-fx-background-color: #DBC2AD;" stylesheets="@buttonGE.css" text="Deconnexion" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/icons8-sign-out-50.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="436.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.user.Mail">
+    <children>
+        <TextArea fx:id="messageArea" layoutX="24.0" layoutY="170.0" prefHeight="200.0" prefWidth="572.0" />
+        <TextField fx:id="subjectField" layoutX="24.0" layoutY="108.0" prefHeight="26.0" prefWidth="572.0" />
+        <TextField fx:id="toField" layoutX="24.0" layoutY="49.0" prefHeight="26.0" prefWidth="572.0" />
+        <Button fx:id="btn" layoutX="221.0" layoutY="389.0" mnemonicParsing="false" onAction="#sendEmail" prefHeight="26.0" prefWidth="157.0" text="Envoyer" />
+      <Label layoutX="24.0" layoutY="23.0" text="Email" />
+      <Label layoutX="24.0" layoutY="82.0" text="Sujet" />
+      <Label layoutX="24.0" layoutY="145.0" text="Contenu" />
+    </children>
+</AnchorPane>

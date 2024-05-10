@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.user.itemPost"
+      alignment="CENTER"
+      spacing="10.0"
+      style="-fx-background-color: white; -fx-border-color: black; -fx-padding: 10px; -fx-border-width: 1px;">
+
+    <Button fx:id="smsButton" text="Share via SMS" onAction="#sendSMS" />
+    <Button text="Share via WhatsApp" onAction="#shareViaWhatsApp" />
+    <Button text="Share via Other" onAction="#shareViaOther" />
+
+</VBox>
